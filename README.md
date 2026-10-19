@@ -1,21 +1,16 @@
 # Tawny Brook: Monorepo · Cloudflare (protected)
 
-> **This is a template, not a repository.** Copy it out and prepare it before an eval (steps below).
-> Nothing here is deployed.
-
 A monorepo with three apps on **Cloudflare**, with preview links **behind Cloudflare Access**. Static Vite +
 TypeScript, no framework. The page reads a live list from the shared Supabase test project.
 Row in the support matrix: impeccable-reviews#302.
 
 ## Deployment links
 
-Filled in at prep time.
-
 | App | Folder | Production | Preview gate |
 |---|---|---|---|
-| _app one_ | `apps/<app>` | _not deployed_ | yes |
-| _app two_ | `apps/<app>` | _not deployed_ | yes |
-| _app three_ | `apps/<app>` | _not deployed_ | yes |
+| Heron | `apps/heron-sh1` | https://tawny-brook-2m1y-heron-sh1.pages.dev | yes |
+| Sumac | `apps/sumac-jft` | https://tawny-brook-2m1y-sumac-jft.pages.dev | yes |
+| Thyme | `apps/thyme-mik` | https://tawny-brook-2m1y-thyme-mik.pages.dev | yes |
 
 ## Names
 
