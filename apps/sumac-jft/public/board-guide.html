@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reading the Sumac board</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #3b4bc8; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      main { max-width: 44rem; margin: 0 auto; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        margin: 3rem 1rem 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #3b4bc8, #8a4fd6, #e0568a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lede {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no padding or background. */
+        margin: 0;
+        padding: 0;
+        max-width: none;
+      }
+      .steps { padding: 0 1rem; }
+      .steps li { line-height: 1.7; }
+      .note {
+        margin: 1.5rem 1rem;
+        /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 contrast. */
+        color: #b8b8b8;
+      }
+      .bar {
+        height: 0.5rem; width: 30%; margin: 1.5rem 1rem; border-radius: 0.25rem; background: var(--accent);
+        /* Intentional, for Impeccable's test drive: a transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .bar:hover { width: 100%; }
+      .back {
+        display: inline-block; margin: 0 1rem 2rem; color: var(--accent);
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px;
+      }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Sumac</a>
+      <a href="/#live" style="color: var(--accent)">Live list</a>
+    </header>
+    <main>
+      <h1>Reading the Sumac board</h1>
+      <p class="lede">Sumac lays the whole shared list out on one board, so you can see what is open and what is done without scrolling.</p>
+      <ol class="steps">
+        <li>Open the board to see the five newest items.</li>
+        <li>Open items sit in plain text; finished ones carry a check mark.</li>
+        <li>Come back any time: the board reads the list fresh on every visit.</li>
+      </ol>
+      <p class="note">Everything on the board comes straight from the shared list.</p>
+      <div class="bar"></div>
+      <a class="back" href="/">Back to the board</a>
+    </main>
+    <footer>Sumac · the whole list, at a glance</footer>
+  </body>
+</html>
