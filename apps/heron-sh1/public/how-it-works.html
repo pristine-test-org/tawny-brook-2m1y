@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Heron works</title>
+    <style>
+      :root { font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      body { margin: 0; --accent: #2f7d4f; }
+      header, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      header { display: flex; justify-content: space-between; align-items: center; }
+      .mark { font-weight: 700; color: var(--accent); text-decoration: none; }
+      main { max-width: 44rem; margin: 0 auto; }
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.25rem);
+        margin: 3rem 1rem 1rem;
+        /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+        background: linear-gradient(90deg, #2f7d4f, #3bb3a0, #7a5af8);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .lede {
+        font-size: 1.1rem;
+        line-height: 1.5;
+        /* Intentional, for Impeccable's test drive: body text flush with the viewport edge, no padding or background. */
+        margin: 0;
+        padding: 0;
+        max-width: none;
+      }
+      .steps { padding: 0 1rem; }
+      .steps li { line-height: 1.7; }
+      .note {
+        margin: 1.5rem 1rem;
+        /* Intentional, for Impeccable's test drive: light grey text well under 4.5:1 contrast. */
+        color: #b8b8b8;
+      }
+      .bar {
+        height: 0.5rem; width: 30%; margin: 1.5rem 1rem; border-radius: 0.25rem; background: var(--accent);
+        /* Intentional, for Impeccable's test drive: a transition on a layout property. */
+        transition: width 0.3s;
+      }
+      .bar:hover { width: 100%; }
+      .back {
+        display: inline-block; margin: 0 1rem 2rem; color: var(--accent);
+        /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+        font-size: 10px;
+      }
+      footer { color: #777; font-size: 0.9rem; border-top: 1px solid #e5e5e0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Heron</a>
+      <a href="/#live" style="color: var(--accent)">Live list</a>
+    </header>
+    <main>
+      <h1>How Heron works</h1>
+      <p class="lede">Heron keeps one shared list in view for everyone who walks through the front door, so nobody has to ask what is next.</p>
+      <ol class="steps">
+        <li>Someone adds an item to the shared list.</li>
+        <li>Heron shows the five newest items on the front page.</li>
+        <li>Finished items get a check mark, and the rest stay in view.</li>
+      </ol>
+      <p class="note">The list refreshes each time the page opens.</p>
+      <div class="bar"></div>
+      <a class="back" href="/">Back to the front door</a>
+    </main>
+    <footer>Heron · the shared list, kept calm</footer>
+  </body>
+</html>
